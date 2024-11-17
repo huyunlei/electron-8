@@ -23,11 +23,11 @@ jobs:
           node-version: 18
 
       - name: Install Dependencies
-        run: npm install
+        run: yarn install
 
       - name: build-win
         if: matrix.os == 'windows-latest'
-        run: npm run build:win
+        run: yarn build:win
         env:
           GITHUB_TOKEN: ${{ secrets.github_token }}
 
